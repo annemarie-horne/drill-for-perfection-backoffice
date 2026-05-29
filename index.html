@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeMaker Test Editor Mockup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img src="https://meirco.timemaker.org/images/logo.png" alt="TimeMaker" />
+      </div>
+      <nav class="tabs" aria-label="Main navigation">
+        <button class="icon-only" aria-label="Menu"><img src="https://meirco.timemaker.org/images/hamburger-menu.png" alt="" /></button>
+        <button class="active">Tests</button>
+        <button>Results</button>
+        <button>Settings</button>
+      </nav>
+      <div class="userbox">
+        <strong>Hi, Annemarie Home!</strong>
+        <a href="#">Logout</a>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="filter-row">
+        <label for="show">Show:</label>
+        <select id="show">
+          <option>All</option>
+        </select>
+      </div>
+
+      <section class="panel">
+        <div class="panel-actions">
+          <h1>Test ID: 15</h1>
+          <button class="btn blue">Preview</button>
+        </div>
+
+        <form class="meta-form">
+          <label>Name:</label>
+          <input value="ANA Test (Short Length)" />
+
+          <label>Description:</label>
+          <textarea>This is some description for the test Wheneeeee!</textarea>
+
+          <label>Category:</label>
+          <div class="inline-fields">
+            <select><option>Test</option></select>
+            <select><option>Ana</option></select>
+            <button class="mini blue" type="button">i</button>
+          </div>
+
+          <label>Phone Format:</label>
+          <select><option>No Format</option></select>
+
+          <label>Counter Settings:</label>
+          <label class="check"><input type="checkbox" checked /> Display Counter</label>
+
+          <label>Caption Invoice:</label>
+          <div class="inline-fields tiny-inputs">
+            <input value="" />
+            <span>Text Before</span>
+            <input value="ZZZZ" />
+            <span>Number Length</span>
+            <input value="10" />
+            <span>Text After</span>
+            <input />
+            <span>Start From</span>
+            <input value="100" />
+          </div>
+
+          <label>Default Settings:</label>
+          <div class="checkbox-grid">
+            <label><input type="checkbox" /> Required</label>
+            <label><input type="checkbox" /> Allow Attachments</label>
+            <label><input type="checkbox" /> Require Attachments</label>
+            <label><input type="checkbox" /> Create Production Task</label>
+            <label><input type="checkbox" /> Allow User Notes</label>
+            <label><input type="checkbox" /> Comments Opened</label>
+          </div>
+
+          <label>Fields:</label>
+          <div class="checkbox-grid">
+            <label><input type="checkbox" checked /> Contact Name</label>
+            <label><input type="checkbox" /> Email</label>
+            <label><input type="checkbox" /> Address</label>
+            <label><input type="checkbox" /> Cell Phone</label>
+            <label><input type="checkbox" /> Work Phone</label>
+            <label><input type="checkbox" /> Company</label>
+            <label><input type="checkbox" /> Agree to receive Email</label>
+          </div>
+
+          <label>Required:</label>
+          <div class="checkbox-grid muted">
+            <label><input type="checkbox" /> Contact Name</label>
+            <label><input type="checkbox" disabled /> Email</label>
+            <label><input type="checkbox" disabled /> Address</label>
+            <label><input type="checkbox" disabled /> Cell Phone</label>
+            <label><input type="checkbox" disabled /> Work Phone</label>
+            <label><input type="checkbox" disabled /> Company</label>
+          </div>
+        </form>
+
+        <div class="green-actions">
+          <button>Use Defined Fields</button>
+          <button>Notifications</button>
+          <button>Actions</button>
+          <button>Sections</button>
+        </div>
+
+        <section class="block">
+          <div class="block-title">
+            <span>USER DEFINED FIELDS [1]</span>
+            <button class="btn blue">Add User Defined Field</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Required</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Property Street Address</td>
+                <td>Text</td>
+                <td>No</td>
+                <td class="actions">
+                  <button class="mini blue">↑</button><button class="mini green">↓</button>
+                  <button class="mini blue">Edit</button><button class="mini red">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="block compact">
+          <div class="block-title">
+            <span>NOTIFICATIONS [0]</span>
+            <button class="btn blue">Add Notification</button>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Condition</th><th>Days</th><th>Action</th><th>Actions</th></tr>
+            </thead>
+          </table>
+        </section>
+
+        <section class="block compact">
+          <div class="block-title">
+            <span>ACTIONS [1]</span>
+            <button class="btn blue">Add Action</button>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Launch At</th><th>Launch Type</th><th>Subject</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Start</td><td>Production Task</td><td>Test</td><td><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="block section-block">
+          <div class="block-title">
+            <button class="btn blue">Show level</button>
+            <span>SECTIONS [2]</span>
+            <div>
+              <button class="btn blue">Use Existing Section</button>
+              <button class="btn blue">Add Section</button>
+            </div>
+          </div>
+
+          <div class="section-line">
+            <label>Section #1</label>
+            <input value="REQUIREMENTS" />
+            <button class="mini blue">↗</button>
+            <button class="mini red">Delete</button>
+          </div>
+          <div class="section-line">
+            <label>Run After Completion</label>
+            <select><option>-- Select Test --</option></select>
+          </div>
+
+          <h2>Actions</h2>
+          <table class="empty-table">
+            <thead><tr><th>Launch At</th><th>Launch Type</th><th>Subject</th><th>Actions</th></tr></thead>
+          </table>
+
+          <h2>Questions</h2>
+          <div class="questions-grid">
+            <div class="q-head q-seq">#</div>
+            <div class="q-head q-question">Question</div>
+            <div class="q-head q-type">Question Type</div>
+            <div class="q-head q-actions">Actions</div>
+
+            <div class="q-row selected">
+              <div class="q-cell q-seq">1</div>
+              <div class="q-cell q-question">Multiple Answers</div>
+              <div class="q-cell q-type"><span>Multiple Answers [2]</span><span class="q-icons"><i class="fa-solid fa-gear"></i><i class="fa-solid fa-xmark inactive"></i><i class="fa-solid fa-xmark inactive"></i><i class="fa-regular fa-comment"></i><i class="fa-solid fa-minus"></i><i class="fa-regular fa-note-sticky"></i><i class="fa-solid fa-gear"></i><i class="fa-solid fa-chart-simple"></i><b>100%</b></span></div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">2</div>
+              <div class="q-cell q-question">Dropdown</div>
+              <div class="q-cell q-type"><span>Dropdown (3)</span><span class="q-icons"><i class="fa-solid fa-gear"></i><i class="fa-solid fa-xmark inactive"></i><i class="fa-solid fa-xmark inactive"></i><i class="fa-regular fa-comment"></i><i class="fa-solid fa-minus"></i><i class="fa-regular fa-note-sticky"></i><i class="fa-solid fa-gear"></i><i class="fa-solid fa-chart-simple"></i><b>100%</b></span></div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+          </div>
+          <table class="questions more-questions">
+            <tbody>
+              <tr><td>3</td><td>Calculated</td><td>Calculated<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+              <tr><td>4</td><td>Address</td><td>Address<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+              <tr><td>5</td><td>Checkbox</td><td>Checkbox<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+              <tr><td>6</td><td>Checklist</td><td>Checklist<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+              <tr><td>7</td><td>Number</td><td>Number<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+              <tr><td>8</td><td>Text</td><td>Text (Multi Line Text)<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+              <tr><td>9</td><td>Time</td><td>Time<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+              <tr><td>10</td><td>Time Range</td><td>Time Range<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+              <tr><td>11</td><td>Yes, No</td><td>Yes, No<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+              <tr><td>12</td><td>Yes, No, Maybe</td><td>Yes, No, Maybe<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+            </tbody>
+          </table>
+          <div class="right"><button class="btn blue">Add Question</button></div>
+
+          <div class="section-line second">
+            <label>Section #2</label>
+            <input value="eeeeee" />
+            <button class="mini blue">↗</button>
+            <button class="mini red">Delete</button>
+          </div>
+          <div class="section-line">
+            <label>Run After Completion</label>
+            <select><option>-- Select Test --</option></select>
+          </div>
+          <h2>Questions</h2>
+          <table class="questions">
+            <thead><tr><th>#</th><th>Question</th><th>Question Type</th><th>Actions</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>wwww</td><td>Yes, No, Maybe<br /><span class="q-icons"><span class="gear">⚙</span><span class="bad">✕</span><span class="bad">✕</span><span class="screen"></span><span class="mark"></span><span class="doc"></span><span class="gear small">⚙</span><span class="flag"></span></span><strong class="score">100%</strong></td><td class="actions"><button class="mini icon-btn disabled">⇅</button><button class="mini icon-btn up">⬆</button><button class="mini icon-btn down">⬇</button><button class="mini blue">Add Sub</button><button class="mini blue">Move/Copy</button><button class="mini blue">Edit</button><button class="mini red">Delete</button></td></tr>
+            </tbody>
+          </table>
+          <div class="right"><button class="btn blue">Add Question</button></div>
+        </section>
+
+        <section class="days-card">
+          <h2>Stages Custom Days to Complete</h2>
+          <div class="days-grid">
+            <label class="yellow">Started:</label><input value="0" />
+            <label>Completed:</label><input value="0" />
+            <label>Evaluated:</label><input value="0" />
+            <label>Evaluation Delivered:</label><input value="0" />
+          </div>
+        </section>
+
+        <section class="chart-card">
+          <h2>Evaluation</h2>
+          <div class="chart">
+            <span class="axis-y">Evaluation Count</span>
+            <span class="axis-x">Score</span>
+          </div>
+        </section>
+
+        <div class="save-row">
+          <button class="btn blue">✓ Save</button>
+          <button class="btn blue danger">✕ Cancel</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>© 2015 - 2026 by Guaranteed Prosperity</footer>
+  </body>
+</html>
