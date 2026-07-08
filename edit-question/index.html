@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeMaker Test Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+
+    <div class="pageHeaderLogoContainerr">
+      <div class="wrapper">
+        <img src="./images/logo.png" class="pageLogo" style="height:36px;float:left;padding:0;">
+        <div id="cktoolbarContainer" style="display:none;">
+          <div id="editorHider"></div>
+          <div id="calcTableShowButtonContainer"></div>
+          <div id="calcTableControlContainer"></div>
+        </div>
+
+        <div class="userbox">
+          <strong>Hi, Annemarie Horne!</strong>
+          <a href="#">Logout</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="mainNavigation">
+      <ul>
+        <li class="navicon"><img src="https://meirco.timemaker.org/images/hamburger-menu.png" /></li>
+        <li>Tests</li>
+        <li class="active">Drill for Perfection</li>
+        <li>Results</li>
+        <li>Settings</li>
+      </ul>
+    </div>
+
+    <nav class="admin-subnav" aria-label="Drill for Perfection administration">
+      <a class="active" href="../drill-for-perfection-home/#tests">Tests</a>
+      <a href="../drill-for-perfection-home/#posts">Job Titles / Posts</a>
+      <a href="../drill-for-perfection-home/#groups">Test Groups</a>
+      <a href="../drill-for-perfection-home/#students">Students / Employees</a>
+      <a href="../drill-for-perfection-home/#teachers">Teachers</a>
+      <a href="../drill-for-perfection-home/#paths">Learning Paths</a>
+      <a href="../drill-for-perfection-home/#results">Results & Reporting</a>
+    </nav>
+
+    
+
+    <div class="filter-row">
+      <label for="show">Show:</label>
+      <select id="show"><option>All</option></select>
+    </div>
+
+
+
+
+    <div class="maincontainer">
+      
+      <div class="panel-actions-head">
+        <h1>Test ID: 15</h1>
+        <button class="btn blue">Preview</button>
+      </div>
+
+      <form class="meta-form">
+        <label for="testName">Test Name:</label>
+        <input id="testName" value=" " />
+
+        <label for="testDescription">Test Description:</label>
+        <textarea id="testDescription" rows="3"></textarea>
+
+        <label for="testOutcome">Test Outcome:</label>
+        <textarea id="testOutcome" rows="2"></textarea>
+
+        <label for="testInstructions">Test Instructions:</label>
+        <textarea id="testInstructions" rows="2"></textarea>
+
+        <label>Timer:</label>
+        <label class="check"><input type="checkbox" checked /> Force Timer on Study</label>
+
+        <label>Timer:</label>
+        <label class="check"><input type="checkbox" checked /> Force Timer on Test Knowledge</label>
+
+        <div></div><div>Teacher Details</div>
+        <label for="teacherName">Teacher Name:</label>
+        <input id="teacherName" value=" " />
+        <label for="teacherPhone">Teacher Phone:</label>
+        <input id="teacherPhone" value=" " />
+        <label for="teacherPost">Teacher Post:</label>
+        <input id="teacherPost" value=" " />
+        <label for="allowedTeacherRole">Allowed Teacher Role:</label>
+        <select id="allowedTeacherRole">
+          <option>Senior Sales Executive</option>
+          <option>Sales Manager</option>
+          <option>Customer Support Lead</option>
+          <option>Any approved teacher</option>
+        </select>
+
+        <div></div><div>Student Details</div>
+        <label for="studentName">Student Name:</label>
+        <input id="studentName" value=" " />
+        <label for="studentPhone">Student Phone:</label>
+        <input id="studentPhone" value=" " />
+        <label for="studentPost">Student Post:</label>
+        <input id="studentPost" value=" " />
+        <label for="requiredStudentPost">Required For Student Post:</label>
+        <select id="requiredStudentPost">
+          <option>Junior Salesperson</option>
+          <option>Senior Sales Executive</option>
+          <option>Sales Manager</option>
+          <option>Junior Assistant</option>
+          <option>Customer Support Agent</option>
+          <option>Not linked to a post</option>
+        </select>
+        <label for="studentAddress">Student Address:</label>
+        <textarea id="studentAddress" rows="2"></textarea>
+
+        <label>Counter Settings:</label>
+        <label class="check"><input type="checkbox" checked /> Display Counter</label>
+
+        <label for="counterCaption">Caption:</label>
+        <div class="counter-fields">
+          <input id="counterCaption" value="" />
+          <span>Text Before Number</span><input value="" />
+          <span>Length</span><input value="" />
+          <span>Text After</span><input value="" />
+          <span>Start From</span><input value="" />
+        </div>
+
+       
+      </form>
+
+      <section class="prerequisite-panel">
+        <div class="prerequisite-heading">
+          <div><h2>PREREQUISITES</h2><p>Select tests that must be completed before this test becomes available.</p></div>
+        </div>
+        <div class="prerequisite-layout">
+          <div>
+            <label for="prerequisiteSearch">Search Existing Tests</label>
+            <input id="prerequisiteSearch" placeholder="Search by test name" />
+            <div class="prerequisite-options" data-prerequisite-options>
+              <label><input type="checkbox" value="Junior Salesperson Product Knowledge" checked /> Junior Salesperson Product Knowledge</label>
+              <label><input type="checkbox" value="Company CRM Basics" /> Company CRM Basics</label>
+              <label><input type="checkbox" value="New Employee Orientation" /> New Employee Orientation</label>
+              <label><input type="checkbox" value="Sales Objection Handling" /> Sales Objection Handling</label>
+              <label><input type="checkbox" value="Customer Follow-Up Procedure" /> Customer Follow-Up Procedure</label>
+            </div>
+          </div>
+          <div class="selected-prerequisites">
+            <h3>Selected Prerequisites</h3>
+            <ul data-selected-prerequisites></ul>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="block section-block">
+        <div class="block-title">
+          <button class="btn blue">Show level</button>
+          <span>SECTIONS [1]</span>
+          <div>
+            <button class="btn blue">Use Existing Section</button>
+            <button class="btn blue">Add Section</button>
+          </div>
+        </div>
+
+        <div class="subcontainer">
+
+          <div class="section-line">
+            <label for="sectionName">Section #1</label>
+            <input id="sectionName" value="CORE KNOWLEDGE" />
+            <button class="mini blue" aria-label="Section settings"><i class="fa-solid fa-pen"></i></button>
+            <button class="mini red">Delete</button>
+          </div>
+
+          <div class="section-subheading">
+            <h2>Actions</h2>
+            <button class="btn blue">Add Action</button>
+          </div>
+          <table class="section-actions-table">
+            <thead><tr><th>Launch At</th><th>Launch Type</th><th>Subject</th><th>Actions</th></tr></thead>
+            <tbody></tbody>
+          </table>
+
+          <div class="questions-heading">
+            <button class="btn blue">Show level</button>
+            <h2>Questions</h2>
+            <button class="btn blue">Add Question</button>
+          </div>
+
+          <div class="questions-grid">
+            <div class="q-head q-seq">#</div>
+            <div class="q-head q-question">Question</div>
+            <div class="q-head q-type">Question Type</div>
+            <div class="q-head q-actions">Actions</div>
+
+            <div class="q-row selected">
+              <div class="q-cell q-seq">1</div>
+              <div class="q-cell q-question" title="What is the applicant's full first name?">What is the applicant's full first name?</div>
+              <div class="q-cell q-type">Text</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">2</div>
+              <div class="q-cell q-question" title="In which city does the applicant currently live?">In which city does the applicant currently live?</div>
+              <div class="q-cell q-type">Text</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">3</div>
+              <div class="q-cell q-question" title="How must an agent act when working with a client?">How must an agent act when working with a client?</div>
+              <div class="q-cell q-type">Text</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">4</div>
+              <div class="q-cell q-question" title="What makes a client's consent valid?">What makes a client's consent valid?</div>
+              <div class="q-cell q-type">Text</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">5</div>
+              <div class="q-cell q-question" title="Which property types can be listed for sale?">Which property types can be listed for sale?</div>
+              <div class="q-cell q-type">Multiple Answers</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">6</div>
+              <div class="q-cell q-question" title="Which applicant details must be recorded first?">Which applicant details must be recorded first?</div>
+              <div class="q-cell q-type">Multiple Answers</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">7</div>
+              <div class="q-cell q-question" title="What document helps compare a property's market value?">What document helps compare a property's market value?</div>
+              <div class="q-cell q-type">Text</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">8</div>
+              <div class="q-cell q-question" title="Which document records the agreement to sell a property?">Which document records the agreement to sell a property?</div>
+              <div class="q-cell q-type">Text</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">9</div>
+              <div class="q-cell q-question" title="Which documents can be used as proof of identity?">Which documents can be used as proof of identity?</div>
+              <div class="q-cell q-type">Multiple Answers</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">10</div>
+              <div class="q-cell q-question" title="What information identifies the property in the application?">What information identifies the property in the application?</div>
+              <div class="q-cell q-type">Text</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">11</div>
+              <div class="q-cell q-question" title="How quickly should a new enquiry be followed up?">How quickly should a new enquiry be followed up?</div>
+              <div class="q-cell q-type">Text</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+            <div class="q-row">
+              <div class="q-cell q-seq">12</div>
+              <div class="q-cell q-question" title="Which qualities should professional client communication have?">Which qualities should professional client communication have?</div>
+              <div class="q-cell q-type">Multiple Answers</div>
+              <div class="q-cell q-actions"><button class="icon-btn disabled" aria-label="Auto arrange"><i class="fa-solid fa-arrow-up-wide-short"></i></button><button class="icon-btn" aria-label="Move up"><i class="fa-solid fa-up-long"></i></button><button class="icon-btn" aria-label="Move down"><i class="fa-solid fa-down-long"></i></button><button>Add Sub</button><button>Move/Copy</button><button>Edit</button><button class="delete">Delete</button></div>
+            </div>
+          </div>
+
+          <div class="right"><button class="btn blue">Add Question</button></div>
+        
+        </div>
+
+      </section>
+
+      <div class="save-row">
+        <a class="btn blue" href="../drill-for-perfection-home/#tests"><i class="fa-solid fa-check"></i> Save</a>
+        <a class="btn blue danger" href="../drill-for-perfection-home/#tests"><i class="fa-solid fa-xmark"></i> Cancel</a>
+      </div>
+      
+      
+    </div>
+
+    <footer>© 2015 - 2026 by Guaranteed Prosperity</footer>
+    <script src="editor.js"></script>
+  </body>
+</html>
